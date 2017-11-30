@@ -1,0 +1,7 @@
+{
+    "name": "Taler",
+    "symbol": "TLR",
+    "algorithm": "lyra2z",
+    "peerMagic": "fbc0b6db",
+    "peerMagicTestnet": "fcc1b7dc"
+}
