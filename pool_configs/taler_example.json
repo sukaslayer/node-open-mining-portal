@@ -1,0 +1,73 @@
+{
+    "enabled": true,
+    "coin": "taler.json",
+
+    "auxes": [ // Defines auxillery coins
+    ],
+    "address": "TXd4dAWrfTzaQ8pzCATrPFSdYN9rLKycM8",
+
+    "rewardRecipients": {
+      "TY7Hm7xLMgue9rscCd2EwJAS1YK1uNJLzB": 0.2
+    },
+
+    "paymentProcessing": {
+        "enabled": true,
+        "paymentInterval": 600,
+        "minimumPayment": 0.0001,
+        "daemon": {
+            "host": "127.0.0.1",
+            "port": 9332,
+            "user": "rpc",
+            "password": "password"
+        }
+    },
+
+    "ports": {
+        "algorithm": "lyra2z",
+        "3008": {
+            "diff": 8
+        },
+        "3032": {
+            "algorithm": "lyra2z",
+            "diff": 32,
+            "varDiff": {
+                "minDiff": 0,
+                "maxDiff": 512,
+                "targetTime": 15,
+                "retargetTime": 90,
+                "variancePercent": 30
+            }
+        },
+        "3256": {
+            "diff": 256
+        }
+    },
+
+    "daemons": [
+        {
+            "host": "127.0.0.1",
+            "port": 9332,
+            "user": "rpc",
+            "password": "password"
+        }
+    ],
+
+    "p2p": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 19333,
+        "disableTransactions": false
+    },
+
+    "mposMode": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 3306,
+        "user": "me",
+        "password": "mypass",
+        "database": "ltc",
+        "checkPassword": false,
+        "autoCreateWorker": false
+    }
+
+}
